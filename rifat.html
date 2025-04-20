@@ -1,0 +1,401 @@
+﻿<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AmarIncome.com</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>AmarIncome.com</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">হোম</a></li>
+        <li><a href="#dashboard">ড্যাশবোর্ড</a></li>
+        <li><a href="#deposit">ডিপোজিট</a></li>
+        <li><a href="#withdraw">উত্তোলন</a></li>
+        <li><a href="#login">লগইন</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h2>স্বাগতম AmarIncome.com এ</h2>
+    <p>আমাদের মাধ্যমে আয় করুন ঘরে বসে</p>
+  </section>
+
+  <!-- Login/Register Section -->
+  <section id="login">
+    <h2>লগইন / রেজিস্টার করুন</h2>
+    <form id="authForm">
+      <input type="text" placeholder="ইউজারনেম" required>
+      <input type="password" placeholder="পাসওয়ার্ড" required>
+      <button type="submit">লগইন</button>
+    </form>
+  </section>
+
+  <!-- Dashboard Section -->
+  <section id="dashboard">
+    <h2>আপনার ড্যাশবোর্ড</h2>
+    <p>বর্তমান ব্যালেন্স: <strong>৳0.00</strong></p>
+    <p>মোট ইনকাম: <strong>৳0.00</strong></p>
+  </section>
+
+  <!-- Deposit Section -->
+  <section id="deposit">
+    <h2>ডিপোজিট করুন</h2>
+    <form>
+      <label>পেমেন্ট মেথড নির্বাচন করুন:</label><br><br>
+
+      <label><input type="radio" name="payment" value="bkash">
+        <img src="https://i.imgur.com/jxWqIBf.png" alt="bKash" width="50"> বিকাশ
+      </label><br>
+
+      <label><input type="radio" name="payment" value="nagad">
+        <img src="https://i.imgur.com/2gZ5GYA.png" alt="Nagad" width="50"> নগদ
+      </label><br>
+
+      <label><input type="radio" name="payment" value="rocket">
+        <img src="https://i.imgur.com/F5wJcWv.png" alt="Rocket" width="50"> রকেট
+      </label><br>
+
+      <label><input type="radio" name="payment" value="paypal">
+        <img src="https://i.imgur.com/yekQ0ZQ.png" alt="PayPal" width="50"> পেপাল
+      </label><br>
+
+      <label><input type="radio" name="payment" value="binance">
+        <img src="https://i.imgur.com/dEAMfsz.png" alt="Binance" width="50"> বাইনান্স
+      </label><br>
+
+      <label><input type="radio" name="payment" value="usdt">
+        <img src="https://i.imgur.com/IEgzzG5.png" alt="USDT" width="50"> ইউএসডিটি (USDT)
+      </label><br><br>
+
+      <input type="number" placeholder="টাকার পরিমাণ" required>
+      <button type="submit">ডিপোজিট</button>
+    </form>
+  </section>
+<!-- Withdraw Section -->
+<section id="withdraw">
+  <h2>টাকা উত্তোলন করুন</h2>
+  <form>
+    <label>উত্তোলনের মাধ্যম:</label><br><br>
+
+    <select required>
+      <option value="">--একটি নির্বাচন করুন--</option>
+      <option value="bkash">বিকাশ</option>
+      <option value="nagad">নগদ</option>
+      <option value="rocket">রকেট</option>
+      <option value="paypal">পেপাল</option>
+      <option value="binance">বাইনান্স</option>
+      <option value="usdt">ইউএসডিটি</option>
+    </select><br><br>
+
+    <input type="text" placeholder="নাম্বার বা একাউন্ট" required>
+    <input type="number" placeholder="পরিমাণ (Min 2 USDT)" required>
+    <button type="submit">উত্তোলন</button>
+  </form>
+</section>
+
+<!-- Transaction History -->
+<section id="history">
+  <h2>লেনদেনের ইতিহাস</h2>
+  <table border="1" cellpadding="10">
+    <tr>
+      <th>তারিখ</th>
+      <th>টাইপ</th>
+      <th>পরিমাণ</th>
+      <th>স্টেটাস</th>
+    </tr>
+    <tr>
+      <td>২০ এপ্রিল ২০২৫</td>
+      <td>ডিপোজিট</td>
+      <td>৳৫০০</td>
+      <td>সম্পন্ন</td>
+    </tr>
+    <tr>
+      <td>২১ এপ্রিল ২০২৫</td>
+      <td>উত্তোলন</td>
+      <td>২ USDT</td>
+      <td>প্রসেসিং</td>
+    </tr>
+  </table>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 AmarIncome.com | Designed by Rifat, Barisal</p>
+</footer>
+
+<!-- CSS Styling -->
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f7f9;
+    margin: 0;
+    padding: 0;
+  }
+  section {
+    background: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+  }
+  h2 {
+    color: #333;
+  }
+  input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+  }
+  button {
+    background: #4caf50;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  button:hover {
+    background: #388e3c;
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  table th, td {
+    text-align: center;
+  }
+  img {
+    vertical-align: middle;
+  }
+
+  @media (max-width: 600px) {
+    section {
+      margin: 10px;
+      padding: 15px;
+    }
+    input, select, button {
+      font-size: 14px;
+    }
+  }
+</style>
+<!-- Payment Methods with Logos -->
+<section id="payment-methods">
+  <h2>সাপোর্টেড পেমেন্ট গেটওয়ে</h2>
+  <div class="payments">
+    <div><img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/BKash_Logo.svg" width="50"><p>বিকাশ</p></div>
+    <div><img src="https://download.logo.wine/logo/Nagad/Nagad-Logo.wine.png" width="50"><p>নগদ</p></div>
+    <div><img src="https://www.logo.wine/a/logo/Rocket_Bank/Rocket_Bank-Logo.wine.svg" width="50"><p>রকেট</p></div>
+    <div><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" width="50"><p>PayPal</p></div>
+    <div><img src="https://cryptologos.cc/logos/binance-coin-bnb-logo.svg?v=030" width="50"><p>Binance</p></div>
+    <div><img src="https://cryptologos.cc/logos/tether-usdt-logo.svg?v=030" width="50"><p>USDT</p></div>
+  </div>
+</section>
+
+<!-- Animation Style -->
+<style>
+  #payment-methods {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    margin: 20px;
+    animation: fadeIn 2s ease;
+  }
+  .payments {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .payments div {
+    width: 100px;
+    text-align: center;
+    margin: 10px;
+    transition: transform 0.3s ease;
+  }
+  .payments div:hover {
+    transform: scale(1.1);
+  }
+  .payments img {
+    max-width: 50px;
+    margin-bottom: 5px;
+  }
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  @media (max-width: 600px) {
+    .payments {
+      flex-direction: column;
+    }
+    .payments div {
+      margin: 10px auto;
+    }
+  }
+</style>
+<!-- User Profile Page -->
+<section id="user-profile">
+  <div class="profile-card">
+    <img src="https://i.imgur.com/1XWcujH.png" alt="User Avatar">
+    <h2>রিফাত | Barisal</h2>
+    <p>ইমেইল: rifat@example.com</p>
+    <p>বর্তমান ব্যালেন্স: <strong>৳420</strong></p>
+    <button onclick="alert('এডিট ফিচার শীঘ্রই আসছে')">প্রোফাইল এডিট করুন</button>
+  </div>
+</section>
+
+<style>
+#user-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+.profile-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  animation: popIn 1.2s ease;
+}
+.profile-card img {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.profile-card h2 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+.profile-card p {
+  margin: 5px 0;
+}
+.profile-card button {
+  background: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.3s;
+}
+.profile-card button:hover {
+  background: #45a049;
+}
+@keyframes popIn {
+  from {transform: scale(0.8); opacity: 0;}
+  to {transform: scale(1); opacity: 1;}
+}
+</style>
+<!-- Income & Transaction History -->
+<section id="history-section">
+  <div class="history-card">
+    <h2>ইনকাম হিস্টোরি</h2>
+    <table>
+      <tr>
+        <th>তারিখ</th>
+        <th>বিবরণ</th>
+        <th>পরিমাণ</th>
+      </tr>
+      <tr>
+        <td>২০ এপ্রিল ২০২৫</td>
+        <td>রেফার ইনকাম</td>
+        <td>৳৩০</td>
+      </tr>
+      <tr>
+        <td>১৯ এপ্রিল ২০২৫</td>
+        <td>দৈনিক কাজ</td>
+        <td>৳৫০</td>
+      </tr>
+      <tr>
+        <td>১৮ এপ্রিল ২০২৫</td>
+        <td>বোনাস</td>
+        <td>৳২০</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="history-card">
+    <h2>লেনদেন হিস্টোরি</h2>
+    <table>
+      <tr>
+        <th>তারিখ</th>
+        <th>ধরন</th>
+        <th>পরিমাণ</th>
+        <th>স্ট্যাটাস</th>
+      </tr>
+      <tr>
+        <td>২০ এপ্রিল ২০২৫</td>
+        <td>উত্তোলন</td>
+        <td>৳১০০</td>
+        <td class="pending">পেন্ডিং</td>
+      </tr>
+      <tr>
+        <td>১৯ এপ্রিল ২০২৫</td>
+        <td>জমা</td>
+        <td>৳২০০</td>
+        <td class="success">সম্পন্ন</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<style>
+#history-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+.history-card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.07);
+}
+.history-card h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.history-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.history-card th, .history-card td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+.success {
+  color: green;
+  font-weight: bold;
+}
+.pending {
+  color: orange;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  #history-section {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
